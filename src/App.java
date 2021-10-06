@@ -9,7 +9,7 @@ public class App {
         do{
             System.out.println("Digite o número do cartão: ");
             ccNumber = scan.nextLong();
-        }while(ccNumber == 0);
+        }while(ccNumber <= 0);
 
         scan.close();
         return ccNumber;
