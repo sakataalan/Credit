@@ -1,25 +1,25 @@
 import java.util.Scanner;
 
 public class App {
-    
-    static long takeNumber(){
+
+    static long takeNumber() {
         Scanner scan = new Scanner(System.in);
         long ccNumber;
 
-        do{
+        do {
             System.out.println("Digite o número do cartão: ");
             ccNumber = scan.nextLong();
-        }while(ccNumber <= 0);
+        } while (ccNumber <= 0);
 
         scan.close();
         return ccNumber;
     }
 
-    static int sumOfSecondToLastDigit(long ccNumber){
+    static int sumOfSecondToLastDigit(long ccNumber) {
         ccNumber /= 10;
         int sum = 0;
 
-        while(ccNumber > 0){
+        while (ccNumber > 0) {
             sum += (((ccNumber % 10) * 2) / 10) + (((ccNumber % 10) * 2) % 10);
             ccNumber /= 100;
         }
@@ -27,10 +27,10 @@ public class App {
         return sum;
     }
 
-    static int sumOfRemainDigits(long ccNumber){
+    static int sumOfRemainDigits(long ccNumber) {
         int sum = 0;
-        
-        while(ccNumber > 0){
+
+        while (ccNumber > 0) {
             sum += ccNumber % 10;
             ccNumber /= 100;
         }
@@ -44,9 +44,9 @@ public class App {
         int sum2 = sumOfRemainDigits(ccNumber);
         int result = sum1 + sum2;
 
-        if(result % 10 == 0){
+        if (result % 10 == 0) {
             System.out.println("valido");
-        }else{
+        } else {
             System.out.println("invalido");
         }
     }
