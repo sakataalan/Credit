@@ -1,5 +1,8 @@
 #.vscode 
-.vscode
+.vscode/
 
 #bin
-bin
+bin/
+
+#java class
+*.class
