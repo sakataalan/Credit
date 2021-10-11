@@ -1,8 +1,0 @@
-#.vscode 
-.vscode/
-
-#bin
-bin/
-
-#java class
-*.class
