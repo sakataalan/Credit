@@ -62,5 +62,4 @@ public class App {
     static boolean result(int oddNumbers, int evenNumbers) {
         return (oddNumbers + evenNumbers) % 10 == 0; 
     }
-
 }
